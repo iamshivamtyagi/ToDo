@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <!-- First LinearLayout is vertical -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- Second LinearLayout is horizontal so that
+             the editText and the button appear horizontally.
+         -->
+        <EditText
+            android:id="@+id/etItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.25"
+            android:hint=""
+            android:paddingTop="10dp" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.75"
+            android:text="Add" />
+        <!-- here
+             android:layout_weight is used so that there is a ratio
+             between the et and btn
+             this ratio decides how much space both will take
+                -->
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
+
+</LinearLayout>
